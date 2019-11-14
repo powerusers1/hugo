@@ -1,0 +1,42 @@
+{{ partial "global-header.html" . }}
+<!-- Impressum Start -->
+<section id="impress">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2>{{ .Site.Params.impress.title }}</h2><br>
+            <p style="color:#68a4c4"><b>{{ .Site.Params.impress.italic }}</b></p>
+          </div>
+          <p>{{ .Site.Params.impress.paragraph | safeHTML }}</p>
+        </div>
+      </div><!-- .col-md-7 close -->
+      <div class="col-md-5 col-sm-12">
+        <div class="block">
+         <img src="{{ with .Site.Params.impress.image }} {{ . | absURL }} {{ end }}" alt="Img">
+        </div>
+      </div><!-- .col-md-5 close -->
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2><b>{{ .Site.Params.impress.title2 }}</b></h2><br>
+            <p>{{ .Site.Params.impress.paragraph2 | safeHTML }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2><b>{{ .Site.Params.impress.title3 }}</b></h2><br>
+            <p>{{ .Site.Params.impress.paragraph3 | safeHTML }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
